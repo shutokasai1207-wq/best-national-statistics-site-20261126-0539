@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nippon in Numbers — Japan's National Statistics</title>
+<meta name="description" content="Nippon in Numbers: Japan's population, economy, labour and prices, from official statistics — every figure labelled with its source and year.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="kicker">Japan &middot; National Statistics</p>
+    <h1>Nippon <em>in</em> Numbers</h1>
+    <p class="tagline">Japan, measured honestly: population, economy, work and prices,
+      from the country's own official statistics — every figure labelled with its source and year.</p>
+    <div class="toolbar">
+      <input type="search" id="search" placeholder="Search indicators — try “wages”, “Tokyo” or “rice”…" aria-label="Search indicators">
+      <label for="year-select">Year</label>
+      <select id="year-select" aria-label="Year">
+        <option value="2025">2025</option>
+        <option value="2024" selected>2024</option>
+        <option value="2023">2023</option>
+        <option value="2022">2022</option>
+        <option value="2021">2021</option>
+        <option value="2020">2020</option>
+      </select>
+      <span class="unit-toggle" role="group" aria-label="Currency">
+        <button type="button" id="unit-yen" class="active" aria-pressed="true">&yen; Yen</button>
+        <button type="button" id="unit-usd" aria-pressed="false">$ Dollars</button>
+      </span>
+    </div>
+  </div>
+</header>
+
+<nav class="main-nav" aria-label="Sections">
+  <ul>
+    <li><a href="#/" data-route="overview">Overview</a></li>
+    <li><a href="#/population" data-route="population">Population</a></li>
+    <li><a href="#/economy" data-route="economy">Economy</a></li>
+    <li><a href="#/labour" data-route="labour">Labour</a></li>
+    <li><a href="#/prices" data-route="prices">Prices</a></li>
+    <li><a href="#/about" data-route="about">About data</a></li>
+  </ul>
+</nav>
+
+<main id="view" aria-live="polite"></main>
+<noscript><p style="max-width:1080px;margin:0 auto;padding:20px">This site needs JavaScript to switch between its sections and draw its charts. The figures themselves are listed on the About the data page in the source files.</p></noscript>
+
+<footer class="site-footer">
+  <div class="inner">
+    <p><strong>Nippon in Numbers</strong> — an independent presentation of Japan's official statistics.
+    Figures come from the Statistics Bureau of Japan, the Cabinet Office, the Ministry of Health,
+    Labour and Welfare, the Ministry of Finance and the National Tax Agency. This site is not
+    affiliated with any government body. All figures are labelled with their source and year on the page.
+    Figures last checked November 2026.</p>
+    <p>Built as a static site: no tracking, no network requests, no external fonts or images.</p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="charts.js"></script>
+<script src="views.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
